@@ -19,7 +19,7 @@ https://github.com/mackenziereading19/Scottish_NaPTAN_Readiness_Baseline
 
 An evidence-bounded comparison of NaPTAN public-transport records and relevant OpenStreetMap objects in Ceredigion.
 
-The project combines deterministic identifier linkage, spatial candidate generation and manual/evidential validation. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
+The project combines deterministic identifier linkage, spatial candidate generation and manual/evidential validation. It also provides an automated current-data acquisition route for independently rerunning the computational methodology while keeping the frozen historical audit evidence separate. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
 
 **Repository:**  
 https://github.com/mackenziereading19/ceredigion-naptan-osm-audit
