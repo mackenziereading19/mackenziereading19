@@ -6,13 +6,22 @@ I am particularly interested in the gap between **formal or modelled accessibili
 
 ## Selected projects
 
+### Raster–Vector Support QA
+
+A reproducible GIS demonstrator for distinguishing bounding-box candidates, topological touches, positive-area overlap, raster-cell representation and valid raster support before attaching raster-derived statistics to polygons.
+
+The accompanying real-data case uses Environment Agency 1 m LiDAR and Living England polygons to show why technical intersection alone does not establish analytical support, while keeping ecological and other substantive interpretation explicitly out of scope.
+
+**Repository:**
+https://github.com/mackenziereading19/raster-vector-support-qa
+
 ### Scottish NaPTAN Readiness Baseline
 
 A reproducible technical baseline examining selected structural characteristics of a Scottish NaPTAN extract.
 
 The analysis processed 50,893 StopPoint records and investigated the 16,275 records without supplied WGS84 coordinates. It found that all of those records retained British National Grid coordinates and could be transformed in the tested OSTN15-backed environment.
 
-**Repository:**  
+**Repository:**
 https://github.com/mackenziereading19/Scottish_NaPTAN_Readiness_Baseline
 
 ### Ceredigion NaPTAN–OpenStreetMap Audit
@@ -21,7 +30,7 @@ An evidence-bounded comparison of NaPTAN public-transport records and relevant O
 
 The project combines deterministic identifier linkage, spatial candidate generation and manual/evidential validation. It also provides an automated current-data acquisition route for independently rerunning the computational methodology while keeping the frozen historical audit evidence separate. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
 
-**Repository:**  
+**Repository:**
 https://github.com/mackenziereading19/ceredigion-naptan-osm-audit
 
 ## Open-source contributions
