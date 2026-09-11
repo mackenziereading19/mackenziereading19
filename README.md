@@ -6,6 +6,26 @@ I am particularly interested in the gap between **formal or modelled accessibili
 
 ## Selected projects
 
+### GTFS Feed Observability Benchmark
+
+A reproducible Python benchmark for examining longitudinal GTFS feed observability, including deterministic manifests, semantic route continuity and service-calendar comparison.
+
+The project is designed to make changes in public-transport feed structure easier to inspect without treating every observed difference as evidence of service change.
+
+**Repository:**
+
+https://github.com/mackenziereading19/GTFS-Feed-Observability-Benchmark
+
+### NPT Active Travel Prioritisation Robustness Audit
+
+A reproducible audit of public active-travel prioritisation evidence in Neath Port Talbot.
+
+The project examines how far prioritisation results depend on analytical assumptions and input evidence, with an emphasis on robustness, traceability and the distinction between calculated priority and defensible interpretation.
+
+**Repository:**
+
+https://github.com/mackenziereading19/NPT-Active-Travel-Prioritisation-Robustness-Audit
+
 ### Raster–Vector Support QA
 
 A reproducible GIS demonstrator for distinguishing bounding-box candidates, topological touches, positive-area overlap, raster-cell representation and valid raster support before attaching raster-derived statistics to polygons.
@@ -13,16 +33,8 @@ A reproducible GIS demonstrator for distinguishing bounding-box candidates, topo
 The accompanying real-data case uses Environment Agency 1 m LiDAR and Living England polygons to show why technical intersection alone does not establish analytical support, while keeping ecological and other substantive interpretation explicitly out of scope.
 
 **Repository:**
+
 https://github.com/mackenziereading19/raster-vector-support-qa
-
-### Scottish NaPTAN Readiness Baseline
-
-A reproducible technical baseline examining selected structural characteristics of a Scottish NaPTAN extract.
-
-The analysis processed 50,893 StopPoint records and investigated the 16,275 records without supplied WGS84 coordinates. It found that all of those records retained British National Grid coordinates and could be transformed in the tested OSTN15-backed environment.
-
-**Repository:**
-https://github.com/mackenziereading19/Scottish_NaPTAN_Readiness_Baseline
 
 ### Ceredigion NaPTAN–OpenStreetMap Audit
 
@@ -31,6 +43,7 @@ An evidence-bounded comparison of NaPTAN public-transport records and relevant O
 The project combines deterministic identifier linkage, spatial candidate generation and manual/evidential validation. It also provides an automated current-data acquisition route for independently rerunning the computational methodology while keeping the frozen historical audit evidence separate. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
 
 **Repository:**
+
 https://github.com/mackenziereading19/ceredigion-naptan-osm-audit
 
 ## Open-source contributions
