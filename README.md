@@ -1,80 +1,76 @@
 # Kenzie Reading
 
-Geographer working across spatial accessibility, public-transport data, open spatial data and reproducible data analysis.
+Incoming WGSSS-funded PhD researcher in Human Geography, working across spatial accessibility, public-transport data, open spatial data and reproducible spatial analysis.
 
-I am particularly interested in the gap between **formal or modelled accessibility** and the access people can actually achieve in practice, and in building transparent analytical workflows that distinguish observed evidence from interpretation.
+I am particularly interested in the gap between **formal or modelled accessibility** and the access people can actually achieve in practice, and in building transparent analytical workflows that distinguish observed evidence, uncertainty and interpretation.
 
 ## Selected projects
 
-### GTFS Feed Observability Benchmark
+### TfL Cycleway 6 Counterfactual Evaluation
 
-A reproducible Python benchmark for examining longitudinal GTFS feed observability, including deterministic manifests, semantic route continuity and service-calendar comparison.
+A reproducible observational evaluation of cycling-volume changes associated with TfL Cycleway 6 section B.
 
-The project is designed to make changes in public-transport feed structure easier to inspect without treating every observed difference as evidence of service change.
+The project tests how robust site-level estimates are to alternative counterfactual construction, pre-treatment fit, donor selection, spatial contamination and placebo diagnostics. It deliberately avoids collapsing heterogeneous site results into a single route-wide causal effect.
 
-**Repository:**
+**Release:** `v1.0.0`
 
-https://github.com/mackenziereading19/GTFS-Feed-Observability-Benchmark
+https://github.com/mackenziereading19/TfL-C6-Counterfactual-Evaluation
 
 ### NPT Active Travel Prioritisation Robustness Audit
 
-A reproducible audit of public active-travel prioritisation evidence in Neath Port Talbot.
+A reproducible decision-support audit of public active-travel prioritisation evidence in Neath Port Talbot.
 
-The project examines how far prioritisation results depend on analytical assumptions and input evidence, with an emphasis on robustness, traceability and the distinction between calculated priority and defensible interpretation.
+The project examines how far priority conclusions depend on policy-value weights, equity emphasis, public-transport deficit, road-safety evidence and normalisation choices, while keeping synthetic stress tests distinct from official policy methodology.
 
-**Repository:**
+**Release:** `v1.0.0`
 
 https://github.com/mackenziereading19/NPT-Active-Travel-Prioritisation-Robustness-Audit
 
-### Raster–Vector Support QA
+### Environmental EO Evidence Reliability Audit
 
-A reproducible GIS demonstrator for distinguishing bounding-box candidates, topological touches, positive-area overlap, raster-cell representation and valid raster support before attaching raster-derived statistics to polygons.
+A bounded spatial-evidence audit testing whether a transparent Sentinel-2 vegetation signal is decision-ready for woodland screening, and what disagreement with mapped woodland evidence actually represents.
 
-The accompanying real-data case uses Environment Agency 1 m LiDAR and Living England polygons to show why technical intersection alone does not establish analytical support, while keeping ecological and other substantive interpretation explicitly out of scope.
+The project rejects weak classifier expansion where the limiting problem is semantic mismatch rather than model complexity, and explicitly separates evidence convergence from ecological ground truth.
 
-**Repository:**
+**Release:** `v1.0.0`
 
-https://github.com/mackenziereading19/raster-vector-support-qa
+https://github.com/mackenziereading19/Environmental-EO-Evidence-Reliability-Audit
 
 ### Ceredigion NaPTAN–OpenStreetMap Audit
 
 An evidence-bounded comparison of NaPTAN public-transport records and relevant OpenStreetMap objects in Ceredigion.
 
-The project combines deterministic identifier linkage, spatial candidate generation and manual/evidential validation. It also provides an automated current-data acquisition route for independently rerunning the computational methodology while keeping the frozen historical audit evidence separate. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
-
-**Repository:**
+The project combines deterministic identifier linkage, spatial candidate generation and evidential validation. It deliberately avoids treating either dataset as ground truth or converting automated discrepancies directly into OpenStreetMap edits.
 
 https://github.com/mackenziereading19/ceredigion-naptan-osm-audit
 
 ## Open-source contributions
 
-### MobilityData GTFS Validator
-
-**Conditional `min_transfer_time` validation — PR #2175**
-
-Adds validation for the conditionally required `transfers.min_transfer_time` field when `transfer_type = 2`, with focused regression coverage and reuse of the validator's existing required-field notice.
-
-https://github.com/MobilityData/gtfs-validator/pull/2175
-
 ### MobilityData Mobility Feed API
 
-**GTFS-RT location inheritance — PR #1811**
+**GTFS-RT location inheritance — PR #1811 — merged**
 
 Fixes locationless GTFS-Realtime feeds failing to inherit location metadata from referenced static GTFS feeds, including preservation and deduplication behaviour.
 
 https://github.com/MobilityData/mobility-feed-api/pull/1811
 
-### MobilityData GBFS Validator
+**GTFS-RT entity-type replacement semantics — PR #1822 — merged**
 
-**Cross-feed vehicle-type reference validation — PR #218**
+Fixes stale GTFS-RT entity types being retained when a later catalogue row narrows the advertised entity-type set, with bounded regression coverage that preserves existing blank-cell semantics.
 
-Adds validation that `vehicle_type_id` references resolve to vehicle types defined elsewhere in a GBFS feed across supported specification versions.
+https://github.com/MobilityData/mobility-feed-api/pull/1822
 
-https://github.com/MobilityData/gbfs-validator/pull/218
+### MobilityData GTFS Validator
+
+**Conditional `min_transfer_time` validation — PR #2175 — open**
+
+Adds validation for the conditionally required `transfers.min_transfer_time` field when `transfer_type = 2`, with focused regression coverage and reuse of the validator's existing required-field notice.
+
+https://github.com/MobilityData/gtfs-validator/pull/2175
 
 ### Transport for the North `caf.viz`
 
-**XY plot data-column validation — PR #48**
+**XY plot data-column validation — PR #48 — open**
 
 Adds consistent validation for requested plotting columns before dispatch to the plotting backend, with regression tests across supported XY plot types.
 
@@ -88,5 +84,6 @@ Across these projects I try to use the same principles:
 - preserve and identify source evidence;
 - prefer reproducible diagnostics to manual assumptions;
 - distinguish discrepancies from confirmed errors;
-- record limitations and negative findings;
-- test changes against the smallest defensible claim.
+- record uncertainty, limitations and negative findings;
+- test changes against the smallest defensible claim;
+- stop when additional complexity is not justified by the decision need.
