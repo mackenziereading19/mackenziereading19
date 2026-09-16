@@ -62,7 +62,7 @@ https://github.com/MobilityData/mobility-feed-api/pull/1822
 
 ### MobilityData GTFS Validator
 
-**Conditional `min_transfer_time` validation — PR #2175 — open**
+**Conditional `min_transfer_time` validation — PR #2175 — merged**
 
 Adds validation for the conditionally required `transfers.min_transfer_time` field when `transfer_type = 2`, with focused regression coverage and reuse of the validator's existing required-field notice.
 
