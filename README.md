@@ -68,9 +68,15 @@ Adds validation for the conditionally required `transfers.min_transfer_time` fie
 
 https://github.com/MobilityData/gtfs-validator/pull/2175
 
+**Recommended `trip_headsign` validation — PR #2192 — merged**
+
+Marks `trip_headsign` as a recommended GTFS field so feeds with the field present but empty emit the validator's existing missing-recommended-field notice, with focused regression coverage and real-feed acceptance testing.
+
+https://github.com/MobilityData/gtfs-validator/pull/2192
+
 ### Transport for the North `caf.viz`
 
-**XY plot data-column validation — PR #48 — open**
+**XY plot data-column validation — PR #48 — merged**
 
 Adds consistent validation for requested plotting columns before dispatch to the plotting backend, with regression tests across supported XY plot types.
 
